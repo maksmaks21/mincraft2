@@ -1,14 +1,16 @@
 from ursina import *
-from ursina.prefabs.first_person_controller import FirstPersonController
-from models import *
 
 app = Ursina()
+from models import *
+
+
 
 
 sky=Sky(texture='sky_sunset')
 
 map = Map()
-map.new_map()
+map.new_map(size=60)
 
-player=FirstPersonController()
-app.run()
+player=Player()
+window.fullscreen = True
+app.run() 
